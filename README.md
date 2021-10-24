@@ -1,4 +1,13 @@
 # SeaBattle game
+
+Table of contents:
+## Backend
+###### Backend API description.
+###### How to test backend part?
+## Frontend
+###### How to test frontend part?
+
+
 Content of this repository represents source code of the SeaBattle game: https://seabattleakvelon.herokuapp.com
 According to design task, see "Task" folder, application consists of two parts: ***backend*** and ***frontend***.
 
