@@ -27,3 +27,13 @@ If you want to test backend API you can send HTTP requests to https://battleship
 5) Send requests to http://localhost:6811 by means Postman or alike software
 
 Frontend part was designed using JS language and React library. Frontend part consists of React files like components which creates the logic of application, Assets like images of ships, signs of hits or misses and CSS file which helps to make UI adaptive and responsive and gives ability to use application on different devices.
+
+How to test frontend part?
+
+If you want to test frontend part you can visit hosted application here: https://seabattleakvelon.herokuapp.com or run application locally in development environment. To do that:
+0) Run backend part locally according to instruction above;
+1) Install a recent version of Node.JS: https://nodejs.org/en/ ;
+2) Clone repository if you haven't: git clone https://github.com/mumutoje/SeaBattle.git ;
+3) Using console and command "cd", go to SeaBattle_frontend folder and execute "npm install", to install node_modules;
+4) Execute "npm start";
+5) Go to http://localhost:3000 ;
