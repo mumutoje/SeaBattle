@@ -6,7 +6,7 @@ According to design task, see "Task" folder, application consists of two parts: 
 
 Backend part was designed using C# language and ASP.NET Core framework. By means of special algorithm, backend generates random ships positions and store them in database. On HTTP request it can change positions or provide them to the frontend part. Backend also gets information about current user, store this information in database and by means of differents HTTP requests performs some actions and returns result back to the frontend.
 
-Backend API description.
+######Backend API description.
 
 Actions with information about ships:
 * GET hostname/api/shiptypes Returns information about ships positions and their initial health state;
@@ -19,7 +19,7 @@ Actions with information about users:
 * PUT hostname/api/users/ Updates the number of shots of the specific user. There is a need to request in a way {"Id" : 1, "Name" : "Ivan", "NumShots" : NEW NUMBER };
 * PUT hostname/api/users/clear ***Optional*** Deletes information about all users.
 
-How to test backend part?
+######How to test backend part?
 
 If you want to test backend API you can send HTTP requests to https://battleshipsmumutoje.azurewebsites.net or if you want to run backend application locally you need:
 1) Clone repository: git clone https://github.com/mumutoje/SeaBattle.git
@@ -32,7 +32,7 @@ If you want to test backend API you can send HTTP requests to https://battleship
 
 Frontend part was designed using JS language and React library. Frontend part consists of React files like components which creates the logic of application, Assets like images of ships, signs of hits or misses and CSS file which helps to make UI adaptive and responsive and gives ability to use application on different devices.
 
-How to test frontend part?
+######How to test frontend part?
 
 If you want to test frontend part you can visit hosted application here: https://seabattleakvelon.herokuapp.com or run application locally in development environment. To do that:
 0) Run backend part locally according to instruction above;
