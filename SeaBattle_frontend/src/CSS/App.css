@@ -1,0 +1,1631 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .Header {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        padding: 10px 0;
+        background-color: rgb(148, 148, 255);
+        align-items: center;
+    }
+
+    .NewGame, .Records {
+        font-family: 'Ubuntu', sans-serif;
+        background-color: rgb(74, 74, 74);
+        border: none;
+        color: white;
+    }
+    .NewGame {
+        margin-left: 5px;
+    }
+
+    .Records {
+        margin-right: 5px;
+    }
+
+    .InputRow {
+        font-family: 'Ubuntu', sans-serif;
+        border: none;
+    }
+
+    .RecordsAligner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width: 320px) and (max-height: 535px)  {
+        .NewGame, .Records {
+            font-size: 13px;
+            width: 80px;
+            height: 33px;
+        }
+
+        .InputRow {
+            height: 33px;
+            width: 120px;
+            margin: 0 7px;
+        }
+
+        .Main {
+            display: flex;
+            flex-flow: wrap;
+            width: 100vw;
+            height: calc(100vh - 55px);
+        }
+
+        .LeftField {
+            order: 2;
+            width: 100vw;
+            height: calc(100vh - 55px - 80vw);
+        }
+
+        .RightField {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            order: 1;
+            width: 100vw;
+            height: 80vw;
+            background-color: rgb(255, 176, 0);
+        }
+
+        .Cross {
+            width: calc(7.5vw - 2px);
+            height: calc(7.5vw - 2px);
+        }
+
+        .Cell {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 7.5vw;
+            height: 7.5vw;
+            background-color: rgb(248,248,248);
+            border: 1px solid rgb(151,151,151);
+        }
+
+        .CellRow {
+            margin-bottom: -3px;
+        }
+
+        .Battlefield {
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .ResRow {
+            width: 100vw;
+            height: calc((100vh - 55px - 80vw)*0.4);
+        }
+
+        .BottomTable {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: calc((100vh - 55px - 80vw)*0.6);
+        }
+
+        .RightColumn {
+            float: left;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            width: 50vw;
+            min-height: calc((100vh - 55px - 80vw)*0.6);
+        }
+
+        .LeftColumn {
+            float: left;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            width: 50vw;
+            height: calc((100vh - 55px - 80vw)*0.6);
+        }
+
+        .ShipInfo {
+            width: fit-content;
+            height: 5vh;
+        }
+
+        .Ship {
+            float: left;
+            width: 23vw;
+        }
+
+        .IndicatorsList {
+            float: left;
+            position: relative;
+            width: fit-content;
+            margin: 0.5vh 5px;
+        }
+
+        .Indicator {
+            width: 3vw;
+            margin: auto 0.5vw;
+        }
+
+        .ShotsSpace {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            background-color: rgb(37, 183, 159);
+            width: 50vw;
+            height: calc((100vh - 55px - 80vw)*0.4);
+            float: left;
+        }
+
+        .HitsSpace {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            background-color: rgb(255, 176, 0);
+            width: 50vw;
+            height: calc((100vh - 55px - 80vw)*0.4);
+            float: left;
+        }
+
+        h1 {
+            margin: 3% auto;
+            color: rgb(74, 74, 74);
+            text-align: center;
+            line-height: 100%;
+            font-size: 5.5vh;
+        }
+
+        .Label {
+            font-weight: bold;
+            color: rgb(74, 74, 74);
+            text-align: center;
+            line-height: 100%;
+            font-size: 2.5vh;
+            margin: 3% auto;
+        }
+
+        hr {
+            background-color: rgb(74, 74, 74);
+            border: 0;
+            height: 1px;
+            line-height: 100%;
+            margin: 0 20%;
+        }
+
+        .SandGlass {
+            position: relative;
+            top: calc((100vh - 55px - 74px) * 0.5);
+            left: calc(50vw - (50px) * 0.5);
+            width: 50px;
+            height: 74px;
+        }
+
+        .TableName {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            width: 100vw;
+            max-height: 40px;
+            min-height: 30px;
+            margin: clamp(5px, 3vh, 20px) auto;
+        }
+
+        .RecordsBody {
+            width: fit-content;
+            height: 71vh;
+            overflow-y: auto;
+        }
+
+        .RecordsBody table {
+            text-align: center;
+            border-spacing: 0;
+            table-layout: fixed;
+            width: 80vw;
+            height: 20vh;
+        }
+
+        .RecordsBody table td {
+            border: 1px solid rgb(148, 148, 255);
+            border-top: none;
+            border-right: none;
+            padding: 10px;
+        }
+
+        .RecordsBody table td:first-child {
+            border-left: none;
+        }
+
+        .RecordsBody table tr:first-child {
+            font-weight: bold;
+            background: rgb(255, 176, 0);
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 90vw;
+            z-index: 1;
+        }
+
+        .RecordsBody table tr {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 90vw;
+            z-index: 0;
+        }
+
+        .ResultsTable {
+            display: none;
+        }
+
+        .Verdict {
+            width: 100vw;
+            height: 91vh;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .Verdict h2 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .Tittle {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .Scores {
+            position: relative;
+            top: -50px;
+            padding: 70px;
+            border-radius: 50%;
+            width: fit-content;
+            height: fit-content;
+            display: inline-block;
+            font-size: 60px;
+            font-weight: bold;
+            background: linear-gradient(30deg,  rgb(255, 176, 0), rgb(148, 148, 255));
+        }
+    }
+
+    @media (max-width: 320px) and (min-height: 535px) {
+
+        .NewGame, .Records {
+           font-size: 13px;
+            width: 80px;
+            height: 33px;
+        }
+
+        .InputRow {
+            height: 33px;
+            width: 120px;
+            margin: 0 7px;
+        }
+
+        .Main {
+            display: flex;
+            flex-flow: wrap;
+            width: 100vw;
+            height: calc(100vh - 55px);
+        }
+
+        .LeftField {
+            order: 2;
+            width: 100vw;
+            height: calc(100vh - 55px - 100vw);
+        }
+
+        .RightField {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            order: 1;
+            width: 100vw;
+            height: 100vw;
+            background-color: rgb(255, 176, 0);
+        }
+
+        .Cross {
+            width: calc(9.5vw - 2px);
+            height: calc(9.5vw - 2px);
+        }
+
+        .Cell {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 9.5vw;
+            height: 9.5vw;
+            background-color: rgb(248,248,248);
+            border: 1px solid rgb(151,151,151);
+        }
+
+        .CellRow {
+            margin-bottom: -3px;
+        }
+
+        .Battlefield {
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .ResRow {
+            width: 100vw;
+            height: calc((100vh - 55px - 100vw)*0.4);
+        }
+
+        .BottomTable {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: calc((100vh - 55px - 100vw)*0.6);
+        }
+
+        .RightColumn {
+            float: left;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            width: 50vw;
+            height: calc((100vh - 55px - 100vw)*0.4);
+        }
+
+        .LeftColumn {
+            float: left;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            width: 50vw;
+            height: calc((100vh - 55px - 100vw)*0.6);
+        }
+
+        .ShipInfo {
+            width: fit-content;
+            height: 5vh;
+        }
+
+        .Ship {
+            float: left;
+            width: 23vw;
+        }
+
+        .IndicatorsList {
+            float: left;
+            position: relative;
+            width: fit-content;
+            margin: 0.5vh 5px;
+        }
+
+        .Indicator {
+            width: 3vw;
+            margin: auto 0.5vw;
+        }
+
+        .ShotsSpace {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            background-color: rgb(37, 183, 159);
+            width: 50vw;
+            height: calc((100vh - 55px - 100vw)*0.4);
+            float: left;
+        }
+
+        .HitsSpace {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            background-color: rgb(255, 176, 0);
+            width: 50vw;
+            height: calc((100vh - 55px - 100vw)*0.4);
+            float: left;
+        }
+
+        h1 {
+            margin: 3% auto;
+            color: rgb(74, 74, 74);
+            text-align: center;
+            line-height: 100%;
+            font-size: 5.5vh;
+        }
+
+        .Label {
+            font-weight: bold;
+            color: rgb(74, 74, 74);
+            text-align: center;
+            line-height: 100%;
+            font-size: 2.5vh;
+            margin: 3% auto;
+        }
+
+        hr {
+            background-color: rgb(74, 74, 74);
+            border: 0;
+            height: 1px;
+            line-height: 100%;
+            margin: 0 20%;
+        }
+
+        .SandGlass {
+            position: relative;
+            top: calc((100vh - 55px - 74px)*0.5);
+            left: calc(50vw - (50px)*0.5);
+            width: 50px;
+            height: 74px;
+        }
+
+        .TableName {
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            width: 100vw;
+            max-height: 40px;
+            min-height: 30px;
+            margin: clamp(5px, 3vh, 20px) auto;
+        }
+
+        .RecordsBody {
+            width: fit-content;
+            height: 71vh;
+            overflow-y: auto;
+        }
+
+        .RecordsBody table {
+            text-align: center;
+            border-spacing: 0;
+            table-layout: fixed;
+            width: 80vw;
+            height: 20vh;
+        }
+
+        .RecordsBody table td {
+            border: 1px solid rgb(148, 148, 255);
+            border-top: none;
+            border-right: none;
+            padding: 10px;
+        }
+
+        .RecordsBody table td:first-child {
+            border-left: none;
+        }
+
+        .RecordsBody table tr:first-child {
+            font-weight: bold;
+            background: rgb(255, 176, 0);
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 90vw;
+            z-index: 1;
+        }
+
+        .RecordsBody table tr {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 90vw;
+            z-index: 0;
+        }
+
+        .ResultsTable {
+            display: none;
+        }
+
+        .Verdict {
+            width: 100vw;
+            height: 91vh;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .Verdict h2 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .Tittle {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .Scores {
+            position: relative;
+            top: -50px;
+            padding: 70px;
+            border-radius: 50%;
+            width: fit-content;
+            height: fit-content;
+            display: inline-block;
+            font-size: 60px;
+            font-weight: bold;
+            background: linear-gradient(30deg,  rgb(255, 176, 0), rgb(148, 148, 255));
+        }
+    }
+
+    @media (min-width: 321px) and (max-width: 480px) {
+        .NewGame, .Records {
+            font-size: 13px;
+            width: 80px;
+            height: 33px;
+        }
+
+        .InputRow {
+            height: 33px;
+            width: 120px;
+            margin: 0 7px;
+        }
+
+        .Main {
+            display: flex;
+            flex-flow: wrap;
+            width: 100vw;
+            height: calc(100vh - 55px);
+        }
+
+        .LeftField {
+            order: 2;
+            width: 100vw;
+            height: calc(100vh - 55px - 100vw);
+        }
+
+        .RightField {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            order: 1;
+            width: 100vw;
+            height: 100vw;
+            background-color: rgb(255, 176, 0);
+        }
+
+        .Cross {
+            width: calc(9.5vw - 2px);
+            height: calc(9.5vw - 2px);
+        }
+
+        .Cell {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 9.5vw;
+            height: 9.5vw;
+            background-color: rgb(248,248,248);
+            border: 1px solid rgb(151,151,151);
+        }
+
+        .CellRow {
+            margin-bottom: -3px;
+        }
+
+        .Battlefield {
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .ResRow {
+            width: 100vw;
+            height: calc((100vh - 55px - 100vw)*0.4);
+        }
+
+        .BottomTable {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: calc((100vh - 55px - 100vw)*0.6);
+        }
+
+        .RightColumn {
+            float: left;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            width: 50vw;
+            height: calc((100vh - 55px - 100vw)*0.4);
+        }
+
+        .LeftColumn {
+            float: left;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            width: 50vw;
+            height: calc((100vh - 55px - 100vw)*0.6);
+        }
+
+        .ShipInfo {
+            width: fit-content;
+            height: 5vh;
+        }
+
+        .Ship {
+            float: left;
+            width: 23vw;
+        }
+
+        .IndicatorsList {
+            float: left;
+            position: relative;
+            width: fit-content;
+            margin: 0.5vh 5px;
+        }
+
+        .Indicator {
+            width: 3vw;
+            margin: auto 0.5vw;
+        }
+
+        .ShotsSpace {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            background-color: rgb(37, 183, 159);
+            width: 50vw;
+            height: calc((100vh - 55px - 100vw)*0.4);
+            float: left;
+        }
+
+        .HitsSpace {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            background-color: rgb(255, 176, 0);
+            width: 50vw;
+            height: calc((100vh - 55px - 100vw)*0.4);
+            float: left;
+        }
+
+        h1 {
+            margin: 3% auto;
+            color: rgb(74, 74, 74);
+            text-align: center;
+            line-height: 100%;
+            font-size: 5.5vh;
+        }
+
+        .Label {
+            font-weight: bold;
+            color: rgb(74, 74, 74);
+            text-align: center;
+            line-height: 100%;
+            font-size: 2.5vh;
+            margin: 3% auto;
+        }
+
+        hr {
+            background-color: rgb(74, 74, 74);
+            border: 0;
+            height: 1px;
+            line-height: 100%;
+            margin: 0 20%;
+        }
+
+        .SandGlass {
+            position: relative;
+            top: calc((100vh - 55px - 74px)*0.5);
+            left: calc(50vw - (50px)* 0.5);
+            width: 50px;
+            height: 74px;
+        }
+
+        .TableName {
+            order: 1;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            width: 100vw;
+            max-height: 40px;
+            min-height: 30px;
+            margin: clamp(5px, 3vh, 20px) auto;
+        }
+
+        .RecordsBody {
+            order: 2;
+            width: fit-content;
+            height: 77vh;
+            overflow-y: auto;
+        }
+
+        .RecordsBody table {
+            text-align: center;
+            border-spacing: 0;
+            table-layout: fixed;
+            width: 80vw;
+        }
+
+        .RecordsBody table td {
+            border: 1px solid rgb(148, 148, 255);
+            border-top: none;
+            border-right: none;
+            padding: 10px;
+        }
+
+        .RecordsBody table td:first-child {
+            border-left: none;
+        }
+
+        .RecordsBody table tr:first-child {
+            font-weight: bold;
+            background: rgb(255, 176, 0);
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 90vw;
+            z-index: 1;
+        }
+
+        .RecordsBody table tr {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 90vw;
+            z-index: 0;
+        }
+
+        .ResultsTable {
+            display: none;
+        }
+
+        .Verdict {
+            width: 100vw;
+            height: 91.9vh;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .Verdict h2 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .Tittle {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .Scores {
+            position: relative;
+            top: -50px;
+            padding: 70px;
+            border-radius: 50%;
+            width: fit-content;
+            height: fit-content;
+            display: inline-block;
+            font-size: 60px;
+            font-weight: bold;
+            background: linear-gradient(30deg,  rgb(255, 176, 0), rgb(148, 148, 255));
+        }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+        .NewGame, .Records {
+            font-size: 13px;
+            width: 80px;
+            height: 33px;
+        }
+
+        .InputRow {
+            height: 33px;
+            width: 300px;
+            margin: 0 7px;
+        }
+
+        .Main {
+            display: flex;
+            flex-flow: wrap;
+            width: 100vw;
+            height: calc(100vh - 55px);
+        }
+
+        .LeftField {
+            order: 2;
+            width: 100vw;
+            height: calc(100vh - 55px - 90vw);
+        }
+
+        .RightField {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            order: 1;
+            width: 100vw;
+            height: 90vw;
+        }
+
+        .Cross {
+            width: calc(8.5vw - 4px);
+            height: calc(8.5vw - 4px);
+        }
+
+        .Cell {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 8.5vw;
+            height: 8.5vw;
+            background-color: rgb(248,248,248);
+            border: 2px solid rgb(151,151,151);
+        }
+
+        .CellRow {
+            margin: -5px;
+        }
+
+        .Battlefield {
+            width: fit-content;
+            height: fit-content;
+            border: 15px solid rgb(255, 176, 0);
+        }
+
+        .ResRow {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            float: left;
+            width: 40vw;
+            height: calc(100vh - 55px - 90vw);
+        }
+
+        .BottomTable {
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60vw;
+            height: calc(100vh - 55px - 90vw);
+        }
+
+        .RightColumn {
+            float: left;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            width: calc(60vw*0.4);
+            height: calc(100vh - 55px - 90vw);
+        }
+
+        .LeftColumn {
+            float: left;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            width: calc(60vw*0.6);
+            height: calc(100vh - 55px - 90vw);
+        }
+
+        .ShipInfo {
+            margin: 5px 0;
+            width: fit-content;
+            height: 4vh;
+        }
+
+        .Ship {
+            float: left;
+            width: 12vw;
+        }
+
+        .IndicatorsList {
+            float: left;
+            position: relative;
+            width: fit-content;
+            margin: 5px 5px;
+        }
+
+        .Indicator {
+            width: 2.2vw;
+            margin: auto 0.3vw;
+        }
+
+        .ShotsSpace {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            background-color: rgb(37, 183, 159);
+            width: 17vw;
+            height: 60%;
+            float: left;
+        }
+
+        .HitsSpace {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            background-color: rgb(255, 176, 0);
+            width: 17vw;
+            height: 60%;
+            float: left;
+        }
+
+        h1 {
+            margin: 4% auto;
+            color: rgb(74, 74, 74);
+            text-align: center;
+            line-height: 100%;
+            font-size: 5vh;
+        }
+
+        .Label {
+            font-weight: bold;
+            color: rgb(74, 74, 74);
+            text-align: center;
+            line-height: 100%;
+            font-size: 2vh;
+            margin: 4% auto;
+        }
+
+        hr {
+            background-color: rgb(74, 74, 74);
+            border: 0;
+            height: 1px;
+            line-height: 100%;
+            margin: 0 15%;
+        }
+
+        .SandGlass {
+            position: relative;
+            top: calc((100vh - 55px - 116px) * 0.5);
+            left: calc(50vw - (80px) * 0.5);
+            width: 80px;
+            height: 116px;
+        }
+
+        .TableName {
+            text-align: center;
+            font-size: clamp(20px, 3.5vh, 35px);
+            font-weight: bold;
+            width: 100vw;
+            height: 8vh;
+            max-height: 40px;
+            min-height: 30px;
+            margin: clamp(5px, 3vh, 20px) auto;
+        }
+
+        .RecordsBody {
+            width: fit-content;
+            height: 80vh;
+            overflow-y: auto;
+        }
+
+        .RecordsBody table {
+            text-align: center;
+            border-spacing: 0;
+            table-layout: fixed;
+            width: 80vw;
+        }
+
+        .RecordsBody table td {
+            border: 1px solid rgb(148, 148, 255);
+            border-top: none;
+            border-right: none;
+            padding: 10px;
+        }
+
+        .RecordsBody table td:first-child {
+            border-left: none;
+        }
+
+        .RecordsBody table tr:first-child {
+            font-weight: bold;
+            background: rgb(255, 176, 0);
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 90vw;
+            z-index: 1;
+        }
+
+        .RecordsBody table tr {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 90vw;
+            z-index: 0;
+        }
+
+        .ResultsTable {
+            order: 2;
+            width: 60vw;
+        }
+
+        .GOTableName {
+            text-align: center;
+            font-size: clamp(20px, 3.5vh, 30px);
+            font-weight: bold;
+            width: 60vw;
+            min-height: 8vh;
+            padding-top: 4vh;
+        }
+
+        .GORecordsBody {
+            position: relative;
+            left: 5vw;
+            width: fit-content;
+            height: 80vh;
+            overflow-y: auto;
+        }
+
+        .GORecordsBody table {
+            text-align: center;
+            border-spacing: 0;
+            table-layout: fixed;
+            width: 50vw;
+        }
+
+        .GORecordsBody table td {
+            border: 1px solid rgb(148, 148, 255);
+            border-top: none;
+            border-right: none;
+            padding: 10px;
+        }
+
+        .GORecordsBody table td:first-child {
+            border-left: none;
+        }
+
+        .GORecordsBody table tr:first-child {
+            font-weight: bold;
+            background: rgb(255, 176, 0);
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 90vw;
+            z-index: 1;
+        }
+
+        .GORecordsBody table tr {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 90vw;
+            z-index: 0;
+        }
+
+        .Verdict {
+            order: 1;
+            width: 40vw;
+            height: 94.9vh;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .Verdict h2 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .Tittle {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .Scores {
+            position: relative;
+            top: -40px;
+            padding: 40px;
+            border-radius: 50%;
+            width: fit-content;
+            height: fit-content;
+            display: inline-block;
+            font-size: 60px;
+            font-weight: bold;
+            background: linear-gradient(30deg,  rgb(255, 176, 0), rgb(148, 148, 255));
+        }
+
+        .Verdict h2, .Scores, .Tittle {
+            position: relative;
+            top: 20vh;
+        }
+
+        .Welcome {
+            margin: clamp(5px,5vh, 70px) auto;
+            width: 100vw;
+            height: fit-content;
+            font-size: clamp(20px, 7vh, 30px);
+            text-align: center;
+        }
+
+        .HintList {
+            margin-top: 5vh;
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            height: fit-content;
+        }
+
+        ul {
+            margin: 0 auto;
+        }
+
+        ul li {
+            position: relative;
+            margin-bottom: 20px;
+            text-indent: 0px;
+            text-align: justify;
+            width: 80vw;
+            line-height: 130%;
+            font-size: 130%;
+        }
+
+        .ServerError button {
+            position: relative;
+            left: calc(50vw - (170px)/2);
+            width: 170px;
+            height: 50px;
+            background: black;
+            color: red;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+
+    @media (min-width: 769px){
+        .NewGame, .Records {
+            font-size: 13px;
+            width: 90px;
+            height: 33px;
+        }
+
+        .InputRow {
+            height: 33px;
+            width: 500px;
+            margin: 0 7px;
+        }
+
+        .Main {
+            display: flex;
+            flex-flow: wrap;
+            width: 100vw;
+            height: calc(100vh - 55px);
+        }
+
+        .LeftField {
+            float: left;
+            width: 45vw;
+            height: calc(100vh - 55px);
+        }
+
+        .RightField {
+            display: flex;
+            justify-content: center;
+            float: left;
+            width: 55vw;
+            height: calc(100vh - 55px);
+        }
+
+        .Cross {
+            width: calc(4vw - 2px);
+            height: calc(4vw - 2px);
+        }
+
+        .Cell {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 4vw;
+            height: 4vw;
+            background-color: rgb(248,248,248);
+            border: 1px solid rgb(151,151,151);
+        }
+
+        .CellRow {
+            margin: -4px;
+        }
+
+        .Battlefield {
+            position: relative;
+            top: calc((100vh - 55px)*0.05);
+            width: fit-content;
+            height: fit-content;
+            border: 10px solid rgb(255, 176, 0);
+        }
+
+        .ResRow {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 45vw;
+            height: calc((100vh - 55px)*0.5);
+        }
+
+        .BottomTable {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 45vw;
+            height: calc((100vh - 55px)*0.4);
+        }
+
+        .RightColumn {
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .LeftColumn {
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .LeftColumn, .RightColumn {
+            position: relative;
+            left: calc(45vw * 0.25);
+        }
+
+        .ShipInfo {
+            margin-bottom: 3vh;
+            width: fit-content;
+            height: 5vh;
+        }
+
+        .Ship {
+            float: left;
+            width: clamp(140px, 20vh ,150px);
+        }
+
+        .IndicatorsList {
+            float: left;
+            position: relative;
+            width: fit-content;
+            margin: 10px 5px;
+        }
+
+        .Indicator {
+            width: 2.5vh;
+            margin: auto 0.3vw;
+        }
+
+        .ShotsSpace {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            background-color: rgb(37, 183, 159);
+            width: 170px;
+            height: 20vh;
+            float: left;
+        }
+
+        .HitsSpace {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            background-color: rgb(255, 176, 0);
+            width: 170px;
+            height: 20vh;
+            float: left;
+        }
+
+        h1 {
+            margin: 6% auto;
+            color: rgb(74, 74, 74);
+            text-align: center;
+            line-height: 100%;
+            font-size: 7vh;
+        }
+
+        .Label {
+            font-weight: bold;
+            color: rgb(74, 74, 74);
+            text-align: center;
+            line-height: 100%;
+            font-size: 3vh;
+            margin: 8% auto;
+        }
+
+        hr {
+            background-color: rgb(74, 74, 74);
+            border: 0;
+            height: 1px;
+            line-height: 100%;
+            margin: 0 12%;
+        }
+
+        .SandGlass {
+            position: relative;
+            top: calc((100vh - 55px - 116px) * 0.5);
+            left: calc(50vw - (80px) * 0.5);
+            width: 80px;
+            height: 116px;
+        }
+
+        .TableName {
+            text-align: center;
+            font-size: clamp(25px, 5vh, 40px);
+            font-weight: bold;
+            width: 100vw;
+            max-height: 40px;
+            min-height: 30px;
+            margin: clamp(5px, 3vh, 20px) auto;
+        }
+
+        .RecordsBody {
+            width: fit-content;
+            height: 82vh;
+            overflow-y: auto;
+        }
+
+        .RecordsBody table {
+            text-align: center;
+            border-spacing: 0;
+            table-layout: fixed;
+            width: 50vw;
+        }
+
+        .RecordsBody table td {
+            border: 1px solid rgb(148, 148, 255);
+            border-top: none;
+            border-right: none;
+            padding: 10px;
+        }
+
+        .RecordsBody table td:first-child {
+            border-left: none;
+        }
+
+        .RecordsBody table tr:first-child {
+            font-weight: bold;
+            background: rgb(255, 176, 0);
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 90vw;
+            z-index: 1;
+        }
+
+        .RecordsBody table tr {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 90vw;
+            z-index: 0;
+        }
+
+        .ResultsTable {
+            float: left;
+            width: 60vw;
+            height: 95.3vh;
+        }
+
+        .GOTableName {
+            text-align: center;
+            font-size: clamp(25px, 5vh, 40px);
+            width: 60vw;
+            min-height: 8vh;
+            padding-top: 4vh;
+        }
+
+        .GORecordsBody {
+            position: relative;
+            left: 7.5vw;
+            width: fit-content;
+            height: 80vh;
+            overflow-y: auto;
+        }
+
+        .GORecordsBody table {
+            text-align: center;
+            border-spacing: 0;
+            table-layout: fixed;
+            width: 45vw;
+        }
+
+        .GORecordsBody table td {
+            border: 1px solid rgb(148, 148, 255);
+            border-top: none;
+            border-right: none;
+            padding: 10px;
+        }
+
+        .GORecordsBody table td:first-child {
+            border-left: none;
+        }
+
+        .GORecordsBody table tr:first-child {
+            font-weight: bold;
+            background: rgb(255, 176, 0);
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 90vw;
+            z-index: 1;
+        }
+
+        .GORecordsBody table tr {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 90vw;
+            z-index: 0;
+        }
+
+        .Verdict {
+            float: left;
+            width: 40vw;
+            height: 95.3vh;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .Verdict h2 {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .Tittle {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .Scores {
+            position: relative;
+            top: -40px;
+            padding: 40px;
+            border-radius: 50%;
+            width: fit-content;
+            height: fit-content;
+            display: inline-block;
+            font-size: 60px;
+            font-weight: bold;
+            background: linear-gradient(30deg,  rgb(255, 176, 0), rgb(148, 148, 255));
+        }
+
+        .Verdict h2, .Scores, .Tittle {
+            position: relative;
+            top: 20vh;
+        }
+
+        .Welcome {
+
+            margin: clamp(5px,5vh, 70px) auto;
+            width: 100vw;
+            height: fit-content;
+            font-size: clamp(10px, 10vh, 30px);
+            text-align: center;
+        }
+
+
+        .HintList {
+            margin-top: 10vh;
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            height: fit-content ;
+        }
+
+        ul {
+            margin: 0 auto;
+        }
+
+        ul li {
+            position: relative;
+            margin-bottom: 20px;
+            text-indent: 0px;
+            text-align: justify;
+            width: 80vw;
+            line-height: 130%;
+            font-size: 130%;
+        }
+
+        .ServerError button {
+            position: relative;
+            left: calc(50vw - (170px)/2);
+            width: 170px;
+            height: 50px;
+            background: black;
+            color: red;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .Welcome {
+            margin: clamp(5px, 3vh, 15px) auto;
+            float: top;
+            width: 100vw;
+            height: fit-content;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .HintList {
+            margin-top: 5vh;
+            width: 100vw;
+            height: fit-content;
+        }
+
+        ul {
+            margin: 0 auto;
+        }
+
+        ul li {
+            position: relative;
+            right: calc((100vw - (80vw + 60px))*-0.5);
+            margin-bottom: 20px;
+            text-indent: 0px;
+            text-align: justify;
+            width: 80vw;
+            line-height: 140%;
+            font-size: 110%;
+        }
+
+        .ServerError button {
+            position: relative;
+            left: calc(50vw - (100px)/2);
+            width: 100px;
+            height: 50px;
+            background: black;
+            color: red;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .withMyId {
+        font-weight: bold;
+        background: linear-gradient(120deg,  rgb(255, 176, 0), rgb(148, 148, 255));
+    }
+
+    .ServerError {
+        width: 100vw;
+        height: fit-content;
+    }
+
+    .ServerError p:first-child {
+        font-size: 150%;
+        font-weight: bold;
+        text-align: center;
+    }
+    .ServerError p {
+        line-height: 150%;
+        font-size: 130%;
+        text-align: center;
+    }
+

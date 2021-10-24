@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9582c9d6-b782-47c6-9df2-113f63ff6806" name="Changes" comment="Seventh version of the BattleShip game frontend">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1z0IhoVVeglmzO1jCq5Qm1MCkHM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.index.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9582c9d6-b782-47c6-9df2-113f63ff6806" name="Changes" comment="" />
+      <created>1633278718223</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1633278718223</updated>
+      <workItem from="1633278723769" duration="36446000" />
+      <workItem from="1633422461098" duration="898000" />
+      <workItem from="1633423385271" duration="69920000" />
+      <workItem from="1633678192398" duration="7450000" />
+      <workItem from="1633689046471" duration="99069000" />
+      <workItem from="1634195255344" duration="32220000" />
+    </task>
+    <task id="LOCAL-00001" summary="First version of the BattleShip game frontend">
+      <created>1633676558507</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1633676558507</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Second version of the BattleShip game frontend">
+      <created>1633781012534</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1633781012534</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Second version of the BattleShip game frontend">
+      <created>1634020436150</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1634020436150</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Third version of the BattleShip game frontend">
+      <created>1634049109943</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1634049109943</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Third version of the BattleShip game frontend">
+      <created>1634061736716</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1634061736716</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fifth version of the BattleShip game frontend">
+      <created>1634131000042</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1634131000042</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Sixth version of the BattleShip game frontend">
+      <created>1634218813615</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1634218813615</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Seventh version of the BattleShip game frontend">
+      <created>1634312456705</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1634312456705</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First version of the BattleShip game frontend" />
+    <MESSAGE value="Second version of the BattleShip game frontend" />
+    <MESSAGE value="Third version of the BattleShip game frontend" />
+    <MESSAGE value="Fifth version of the BattleShip game frontend" />
+    <MESSAGE value="Sixth version of the BattleShip game frontend" />
+    <MESSAGE value="Seventh version of the BattleShip game frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Seventh version of the BattleShip game frontend" />
+  </component>
+</project>
