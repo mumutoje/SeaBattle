@@ -8,7 +8,7 @@ According to design task, see "Task" folder, application consists of two parts: 
 
 ## Backend
 
-Backend part was designed using C# language and ASP.NET Core framework. By means of special algorithm, backend generates random ships positions and store them in database. On HTTP request it can change positions or provide them to the frontend part. Backend also gets information about current user, store this information in database and by means of differents HTTP requests performs some actions and returns result back to the frontend.
+Backend part was designed using C# language and ASP.NET Core framework. By means of special algorithm, backend generates random ships positions and store them in database. On HTTP request it can change positions or provide them to the frontend part. Backend also gets information about current user from frontend, store this information in database and by means of differents HTTP requests performs some actions and returns result back to the frontend.
 
 ###### Backend API description.
 
