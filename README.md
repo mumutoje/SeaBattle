@@ -1,6 +1,8 @@
-# SeaBattle
+# SeaBattle game
 Content of this repository represents source code of the SeaBattle game: https://seabattleakvelon.herokuapp.com
 According to design task, see "Task" folder, application consists of two parts: backend and frontend.
+
+## Backend
 
 Backend part was designed using C# language and ASP.NET Core framework. By means of special algorithm, backend generates random ships positions and store them in database. On HTTP request it can change positions or provide them to the frontend part. Backend also gets information about current user, store this information in database and by means of differents HTTP requests performs some actions and returns result back to the frontend.
 
@@ -25,6 +27,8 @@ If you want to test backend API you can send HTTP requests to https://battleship
 3) Open Battleships_Game.sln in MS Visual Studio
 4) Start debugging
 5) Send requests to http://localhost:6811 by means Postman or alike software
+
+## Frontend
 
 Frontend part was designed using JS language and React library. Frontend part consists of React files like components which creates the logic of application, Assets like images of ships, signs of hits or misses and CSS file which helps to make UI adaptive and responsive and gives ability to use application on different devices.
 
