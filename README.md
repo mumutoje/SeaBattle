@@ -36,8 +36,8 @@ Frontend part was designed using JS language and React library. Frontend part co
 
 If you want to test frontend part you can visit hosted application here: https://seabattleakvelon.herokuapp.com or run application locally in development environment. To do that:
 0) Run backend part locally according to instruction above;
-1) Install a recent version of Node.JS: https://nodejs.org/en/ ;
-2) Clone repository if you haven't: git clone https://github.com/mumutoje/SeaBattle.git ;
+1) Install a recent version of Node.JS: https://nodejs.org/en/
+2) Clone repository if you haven't: git clone https://github.com/mumutoje/SeaBattle.git
 3) Using console and command `cd`, go to SeaBattle_frontend folder and execute `npm install`, to install node_modules;
 4) Execute `npm start`;
-5) Go to http://localhost:3000 ;
+5) Go to http://localhost:3000
