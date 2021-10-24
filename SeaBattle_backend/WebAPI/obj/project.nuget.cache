@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XdLyXKCUQBbmmetaMcROll9V55CB+5A99JSnE3nt9I7RjGKxuKDw1qx+EtMKNBqy9O6/RB1u7wFi/v7wcMGu3Q==",
+  "dgSpecHash": "QlcKjpDFSA3Qs9N+mEso++puFUHpY7l21f7zo5Q/Y7izxPDTnHcsVIOKYD9zWrzF2HtxO7ZCGbttP/ud7PJCPg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\relay\\Desktop\\SeaBattle\\SeaBattle_backend\\WebAPI\\WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\relay\\source\\repos\\BattleShip_Game\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\relay\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\relay\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

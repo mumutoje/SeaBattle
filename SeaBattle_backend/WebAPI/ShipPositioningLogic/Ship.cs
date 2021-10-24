@@ -99,7 +99,7 @@ namespace WebAPI.ShipPositioningLogic
                     count++;
                 }
 
-                // Check wheather specific postion is occupied or not
+                // Checks wheather specific postion is occupied or not
                 foreach (KeyValuePair<int, int[][]> record in Results)
                 {
                     foreach (int[] i in record.Value)

@@ -8,7 +8,8 @@ namespace WebAPI.ShipPositioningLogic
 {
     public class Battlefield
     {
-        static public int[][] Field;
+        public static int[][] Field;
+
         public Battlefield()
         {
             GetFilled();
@@ -26,8 +27,8 @@ namespace WebAPI.ShipPositioningLogic
 
         }
 
-        // Get value of the specific cell in the field
-        static public int GetValue(int[] indexes)
+        // Gets value of the specific cell in the field
+        public static int GetValue(int[] indexes)
         {
             return Field[indexes[0]][indexes[1]];
         }
@@ -42,31 +43,13 @@ namespace WebAPI.ShipPositioningLogic
         }
 
         // Returns random tuple of coordinates in range [0,9]
-        static public int[] GetRandom()
+        public static int[] GetRandom()
         {
             int[] Indexes = new int[2];
             Random rnd = new Random();
             Indexes[0] = rnd.Next(0, 9);
             Indexes[1] = rnd.Next(0, 9);
             return Indexes;
-        }
-        // Returns visual interpretation of the Battlefield (only for debug purposes)
-        public void ShowField()
-        {
-            for (int i = 0; i <= 9; i++)
-            {
-                for (int j = 0; j <= 9; j++)
-                {
-                    if (j != 9)
-                    {
-                        Console.Write($"{Field[i][j]} ");
-                    }
-                    else
-                    {
-                        Console.Write($"{Field[i][j]} \n");
-                    }
-                }
-            }
         }
     }
 }

@@ -8,12 +8,12 @@ namespace WebAPI.ShipPositioningLogic
 {
     public class Positions
     {
-        static public int[][][] ShipPos = new int[5][][];
+        public static int[][][] ShipPos = new int[5][][];
         
-        static public void InitializeShips()
+        public static void InitializeShips()
         {
             Battlefield Field = new();
-
+            
             Ship Carrier = new();
             Carrier.size = 5;
             ShipPos[0] = Carrier.GetPositions();

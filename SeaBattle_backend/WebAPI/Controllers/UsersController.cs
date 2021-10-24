@@ -21,7 +21,7 @@ namespace WebAPI.Controllers
             db = context;
         }
 
-        // Returns the list of users who finished the game successfully (hits-ascending order)
+        // Returns the list of users in shots-ascending order
         // GET/api/users
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> Get()

@@ -23,22 +23,18 @@ namespace WebAPI.Controllers
             db = context;
 
             //Initializes positions of all ships at the first call of ShipTypes Controller
-            
-            Positions.InitializeShips();
+                                 
+            if(db.ShipTypes.Any() == false)
+            {
+                Positions.InitializeShips();
 
-            if(db.ShipTypes.Count() != 0)
-            {
-              
-            }
-            else
-            {
                 db.ShipTypes.Add(new ShipType { Type = "Carrier", Size = 5, Count = 1, Position = $"{JsonConvert.SerializeObject(Positions.ShipPos[0])}" });
                 db.ShipTypes.Add(new ShipType { Type = "Battleship", Size = 4, Count = 1, Position = $"{JsonConvert.SerializeObject(Positions.ShipPos[1])}" });
                 db.ShipTypes.Add(new ShipType { Type = "Cruiser", Size = 3, Count = 1, Position = $"{JsonConvert.SerializeObject(Positions.ShipPos[2])}" });
                 db.ShipTypes.Add(new ShipType { Type = "Submarine", Size = 3, Count = 1, Position = $"{JsonConvert.SerializeObject(Positions.ShipPos[3])}" });
                 db.ShipTypes.Add(new ShipType { Type = "Destroyer", Size = 2, Count = 1, Position = $"{JsonConvert.SerializeObject(Positions.ShipPos[4])}" });
             }
-            
+                       
             db.SaveChanges();
         }
 
@@ -50,10 +46,9 @@ namespace WebAPI.Controllers
             return await db.ShipTypes.ToListAsync();
         }
 
-
-       // Updates positions of the ships in the table
-       // PUT api/shiptypes
-       [HttpPut]
+        // Updates positions of the ships in the table
+        // PUT api/shiptypes
+        [HttpPut]
         public async Task<ActionResult<ShipType>> Put()
         {
             var PosToUpdate = db.ShipTypes.ToList();
@@ -62,6 +57,8 @@ namespace WebAPI.Controllers
             {
                 return BadRequest();
             }
+
+            Positions.InitializeShips();
 
             int i = 0;
             foreach(var pos in PosToUpdate)

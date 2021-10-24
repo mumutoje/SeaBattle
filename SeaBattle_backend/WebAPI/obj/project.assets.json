@@ -5409,11 +5409,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\relay\\Desktop\\SeaBattle\\SeaBattle_backend\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\relay\\source\\repos\\BattleShip_Game\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\relay\\Desktop\\SeaBattle\\SeaBattle_backend\\WebAPI\\WebAPI.csproj",
+      "projectPath": "C:\\Users\\relay\\source\\repos\\BattleShip_Game\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\relay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\relay\\Desktop\\SeaBattle\\SeaBattle_backend\\WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\relay\\source\\repos\\BattleShip_Game\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
