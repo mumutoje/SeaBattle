@@ -9,15 +9,15 @@ Backend part was designed using C# language and ASP.NET Core framework. By means
 ###### Backend API description.
 
 Actions with information about ships:
-* GET hostname/api/shiptypes Returns information about ships positions and their initial health state;
-* PUT hostname/api/shiptypes Makes backend generate and store new ships positions in database;
+* GET hostadress/api/shiptypes Returns information about ships positions and their initial health state;
+* PUT hostadress/api/shiptypes Makes backend generate and store new ships positions in database;
 
 Actions with information about users:
-* GET hostname/api/users Returns a list of users in shots-ascending order;
-* GET hostname/api/users/top Returns a list of users with number of shots higher or equal than 17 in shot-ascending order;
-* POST hostname/api/users Initializes a new user by his name and number of shots {"Name" : "Ivan", "NumShots" : 0 };
-* PUT hostname/api/users/ Updates the number of shots of the specific user. There is a need to request in a way {"Id" : 1, "Name" : "Ivan", "NumShots" : NEW NUMBER };
-* PUT hostname/api/users/clear ***Optional*** Deletes information about all users.
+* GET hostadress/api/users Returns a list of users in shots-ascending order;
+* GET hostadress/api/users/top Returns a list of users with number of shots higher or equal than 17 in shot-ascending order;
+* POST hostadress/api/users Initializes a new user by his name and number of shots {"Name" : "Ivan", "NumShots" : 0 };
+* PUT hostadress/api/users/ Updates the number of shots of the specific user. There is a need to request in a way {"Id" : 1, "Name" : "Ivan", "NumShots" : NEW NUMBER };
+* PUT hostadress/api/users/clear ***Optional*** Deletes information about all users.
 
 ###### How to test backend part?
 
@@ -38,6 +38,6 @@ If you want to test frontend part you can visit hosted application here: https:/
 0) Run backend part locally according to instruction above;
 1) Install a recent version of Node.JS: https://nodejs.org/en/ ;
 2) Clone repository if you haven't: git clone https://github.com/mumutoje/SeaBattle.git ;
-3) Using console and command "cd", go to SeaBattle_frontend folder and execute "npm install", to install node_modules;
-4) Execute "npm start";
+3) Using console and command `cd`, go to SeaBattle_frontend folder and execute `npm install`, to install node_modules;
+4) Execute `npm start`;
 5) Go to http://localhost:3000 ;
