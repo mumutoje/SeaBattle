@@ -9,17 +9,15 @@ Backend part was designed using C# language and ASP.NET Core framework. By means
 ###### Backend API description.
 
 Actions with information about ships:
-* GET **hostadress/api/shiptypes** Returns information about ships positions and their initial health state;
-* PUT **hostadress/api/shiptypes** Makes backend generate and store new ships positions in database;
+* GET **hostadress/api/shiptypes** -- Returns information about ships positions and their initial health state;
+* PUT **hostadress/api/shiptypes** -- Makes backend generate and store new ships positions in database;
 
 Actions with information about users:
-* GET **hostadress/api/users**
-
-Returns a list of users in shots-ascending order;
-* GET **hostadress/api/users/top** Returns a list of users with number of shots higher or equal than 17 in shot-ascending order;
-* POST **hostadress/api/users** Initializes a new user by his name and number of shots {"Name" : "Ivan", "NumShots" : 0 };
-* PUT **hostadress/api/users** Updates the number of shots of the specific user. There is a need to request in a way {"Id" : 1, "Name" : "Ivan", "NumShots" : NEW NUMBER };
-* PUT **hostadress/api/users/clear** ***Optional*** Deletes information about all users.
+* GET **hostadress/api/users** -- Returns a list of users in shots-ascending order;
+* GET **hostadress/api/users/top** -- Returns a list of users with number of shots higher or equal than 17 in shot-ascending order;
+* POST **hostadress/api/users** -- Initializes a new user by his name and number of shots {"Name" : "Ivan", "NumShots" : 0 };
+* PUT **hostadress/api/users** -- Updates the number of shots of the specific user. There is a need to request in a way {"Id" : 1, "Name" : "Ivan", "NumShots" : NEW NUMBER };
+* PUT **hostadress/api/users/clear** -- ***Optional*** Deletes information about all users.
 
 ###### How to test backend part?
 
