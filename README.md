@@ -40,6 +40,7 @@ Frontend part was designed using JS language and React library. Frontend part co
 ***How to test frontend part?***
 
 If you want to test frontend part you can visit hosted application here: https://seabattleakvelon.herokuapp.com or run application locally in development environment. To do that:
+
 0) Run backend part locally according to instruction above;
 1) Install a recent version of Node.JS: https://nodejs.org/en/
 2) Clone repository if you haven't: git clone https://github.com/mumutoje/SeaBattle.git
