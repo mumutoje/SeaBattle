@@ -31,7 +31,7 @@ If you want to test backend API you can send HTTP requests to https://battleship
 2) Install MS Visual Studio
 3) Open Battleships_Game.sln in MS Visual Studio
 4) Start debugging
-5) Send requests to http://localhost:6811 by means Postman or alike software
+5) Send requests to http://localhost:6811 by means of Postman or alike software
 
 ## Frontend
 
