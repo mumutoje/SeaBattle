@@ -29,7 +29,7 @@ Actions with information about users:
 If you want to test backend API you can send HTTP requests to https://battleshipsmumutoje.azurewebsites.net or if you want to run backend application locally you need:
 1) Clone repository: git clone https://github.com/mumutoje/SeaBattle.git
 2) Install MS Visual Studio
-3) Open Battleships_Game.sln in MS Visual Studio
+3) Open Battleships_Game.sln in SeaBattle_backend folder using MS Visual Studio
 4) Start debugging
 5) Send requests to http://localhost:6811 by means of Postman or alike software
 
@@ -43,7 +43,6 @@ If you want to test frontend part you can visit hosted application here: https:/
 
 0) Run backend part locally according to instruction above;
 1) Install a recent version of Node.JS: https://nodejs.org/en/
-2) Clone repository if you haven't: git clone https://github.com/mumutoje/SeaBattle.git
-3) Using console and command `cd`, go to SeaBattle_frontend folder and execute `npm install`, to install node_modules;
-4) Execute `npm start`;
-5) Go to http://localhost:3000
+2) Using console and command `cd`, go to SeaBattle_frontend folder and execute `npm install`, to install node_modules;
+3) Execute `npm start`;
+4) Go to http://localhost:3000
